@@ -6,7 +6,7 @@ const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
     entry: {
-        main: './src/index.js',
+        main: './src/index.ts',
         vendor: [
             'angular', 
             'angular-aria', 
@@ -40,6 +40,11 @@ module.exports = {
             {
                 test: /\.(woff(2)?|ttf|eot|svg|ijmap)$/,
                 loader: "url-loader?limit=10000"
+            },
+            {
+                test: /\.tsx?$/,
+                loader: 'ts-loader',
+                exclude: /node_modules/,
             },
             // {
             //     test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
