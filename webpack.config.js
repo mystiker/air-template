@@ -13,6 +13,7 @@ module.exports = {
             'angular-messages', 
             'angular-animate', 
             'angular-material', 
+            '@uirouter/angularjs',
             'material-design-icons/iconfont/material-icons.css'
         ]
     },
@@ -23,7 +24,7 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(['dist']),
         new HtmlWebpackPlugin({
-            template: 'src/index.html'
+            template: 'src/index.template.ejs'
         }),
         new webpack.optimize.CommonsChunkPlugin({
             name: "vendor"
@@ -58,6 +59,17 @@ module.exports = {
                 ]
             },
             {
+                test: /\.html$/,
+                use: [
+                    // {
+                    //     loader: 'file-loader?name=[name].[ext]'
+                    // },
+                    {
+                        loader: 'html-loader'
+                    }
+                ],
+            },
+            {
                 test: /\.s[ac]ss$/,
                 use: [
                     'style-loader',
@@ -65,6 +77,9 @@ module.exports = {
                     'sass-loader'
                 ]
             }]
+    },
+    resolve: {
+        extensions: [".tsx", ".ts", ".js"]
     },
     output: {
         filename: '[name].[chunkhash].js',
