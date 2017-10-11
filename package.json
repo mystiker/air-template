@@ -36,6 +36,7 @@
   "devDependencies": {
     "@types/angular": "^1.6.32",
     "@types/angular-ui-router": "^1.1.40",
+    "@types/angular-material": "^1.1.54",
     "@types/node": "^7.0.14"
   }
 }

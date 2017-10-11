@@ -1,27 +1,49 @@
-<md-toolbar class="md-hue-2">
-    <div class="md-toolbar-tools">
-        <md-button class="md-icon-button" aria-label="Settings" ng-disabled="true">
-            <md-icon>menu</md-icon>
-        </md-button>
+<section layout="row" flex>
 
-        <h2 flex md-truncate>Toolbar Demo with Icon Buttons</h2>
+    <md-sidenav class="md-sidenav-left" md-component-id="menu-left" md-is-locked-open="$mdMedia('gt-md')" md-whiteframe="4">
 
-        <md-button class="md-icon-button" aria-label="Favorite">
-            <md-icon style="color: red;">favorite</md-icon>
-        </md-button>
+        <md-toolbar class="md-theme-indigo">
+            <h1 class="md-toolbar-tools">Sidenav Left</h1>
+        </md-toolbar>
+        <md-content layout-padding>
+            <p hide show-gt-md>
+                This sidenav is locked open on your device. To go back to the default behavior, narrow your display.
+            </p>
+        </md-content>
 
-        <md-button class="md-icon-button" aria-label="More">
-            <md-icon>more_vert</md-icon>
-        </md-button>
+    </md-sidenav>
+
+    <div layout="column" flex>
+        <md-toolbar class="md-hue-2">
+            <div class="md-toolbar-tools">
+                <md-button ng-click="vm.toggle()" class="md-icon-button" aria-label="Settings">
+                    <md-icon>menu</md-icon>
+                </md-button>
+
+                <h2 flex md-truncate>Toolbar Demo with Icon Buttons</h2>
+
+                <md-button class="md-icon-button" aria-label="Favorite">
+                    <md-icon style="color: red;">favorite</md-icon>
+                </md-button>
+
+                <md-button class="md-icon-button" aria-label="More">
+                    <md-icon>more_vert</md-icon>
+                </md-button>
+            </div>
+        </md-toolbar>
+
+        <md-content layout-padding flex layout="column" layout-align="center center">
+            <p>Hi {{ vm.username }}!</p>
+            <input ng-model="vm.username">
+
+            <a ui-sref="app.home">Visit Home</a>
+            <a ui-sref="app.buttons">Visit Buttons</a>
+
+            <md-button class="md-primary md-raised" ng-click="vm.do()">DO</md-button>
+
+        </md-content>
+
+        <ui-view></ui-view>
     </div>
-</md-toolbar>
 
-<p>Hi {{ vm.username }}!</p>
-<input ng-model="vm.username">
-
-<a ui-sref="app.home">Visit Home</a>
-<a ui-sref="app.buttons">Visit Buttons</a>
-
-<button ng-click="vm.do()">DO</button>
-
-<ui-view></ui-view>
+</section>
