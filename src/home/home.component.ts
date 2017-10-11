@@ -8,18 +8,11 @@ export class HomeComponent implements ng.IComponentOptions {
     static NAME: string = 'homeView';
     controller: any;
     template: any;
+    bindings: any;
+
     constructor() {
         this.controller = HomeController;
         this.template = require('./home.html');
+        this.bindings = { welcome: '<' };
     }
 }
-
-// import angular from 'angular';
-// import angular_material from 'angular-material';
-// import 'angular-material/angular-material.css';
-
-// import HomeController from './home.controller';
-
-// export default angular.module('air-note.home', [angular_material])
-//     .controller('HomeController', HomeController)
-//     .name;

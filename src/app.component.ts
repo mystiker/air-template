@@ -1,26 +1,16 @@
-export interface IAppScope extends ng.IScope {
-  changeLocation: () => void;
-}
-
-class AppController implements ng.IController {
-  static $inject = ['$state'];
-  constructor(private $state: ng.ui.IStateService) {
-
-  }
-
-  changeLocation(): void {
-    console.log("changeLocation called");
-
-    this.$state.go('app.home');
-  }
-}
+import { AppController } from "./app.controller";
 
 export class AppComponent implements ng.IComponentOptions {
   static NAME: string = 'appView';
-  controller: any;
+  controller: typeof AppController;
+  controllerAs: any;
   template: any;
+  bindings: any;
+
   constructor() {
+    //this.bindings = { username: '@' };
     this.controller = AppController;
     this.template = require('./app.html');
+    this.controllerAs = "vm";
   }
 }

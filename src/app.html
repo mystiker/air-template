@@ -1,5 +1,27 @@
-<p>Hello from app!</p>
+<md-toolbar class="md-hue-2">
+    <div class="md-toolbar-tools">
+        <md-button class="md-icon-button" aria-label="Settings" ng-disabled="true">
+            <md-icon>menu</md-icon>
+        </md-button>
 
-<button ng-click="$ctrl.changeLocation()">Go to home state</button>
+        <h2 flex md-truncate>Toolbar Demo with Icon Buttons</h2>
+
+        <md-button class="md-icon-button" aria-label="Favorite">
+            <md-icon style="color: red;">favorite</md-icon>
+        </md-button>
+
+        <md-button class="md-icon-button" aria-label="More">
+            <md-icon>more_vert</md-icon>
+        </md-button>
+    </div>
+</md-toolbar>
+
+<p>Hi {{ vm.username }}!</p>
+<input ng-model="vm.username">
+
+<a ui-sref="app.home">Visit Home</a>
+<a ui-sref="app.buttons">Visit Buttons</a>
+
+<button ng-click="vm.do()">DO</button>
 
 <ui-view></ui-view>
