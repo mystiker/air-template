@@ -22,7 +22,7 @@ import { HomeComponent } from './home/home.component';
 import { ButtonComponent } from './buttons/buttons.component';
 
 // create the main module
-module('air-note', [uiRouter, angularMaterial])
+module('air-note', [uiRouter, angularMaterial, angularMessages])
     // register AppComponent
     .component(AppComponent.NAME, new AppComponent())
     //register HomeComponent

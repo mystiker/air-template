@@ -17,9 +17,10 @@ module.exports = {
             'material-design-icons/iconfont/material-icons.css'
         ]
     },
-    devtool: 'source-map',
+    //devtool: 'source-map',
     devServer: {
-        contentBase: './dist'
+        contentBase: './dist',
+        host: '192.168.178.59'
     },
     plugins: [
         new CleanWebpackPlugin(['dist']),
@@ -28,8 +29,8 @@ module.exports = {
         }),
         new webpack.optimize.CommonsChunkPlugin({
             name: "vendor"
-        })
-        //new UglifyJSPlugin()
+        }),
+        new UglifyJSPlugin()
     ],
     module: {
         //loaders: [, 
