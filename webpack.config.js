@@ -23,7 +23,7 @@ module.exports = {
         host: '0.0.0.0'
     },
     plugins: [
-        new CleanWebpackPlugin(['dist']),
+        //new CleanWebpackPlugin(['dist']),
         new HtmlWebpackPlugin({
             template: 'src/index.template.ejs'
         }),
