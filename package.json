@@ -7,9 +7,10 @@
     "build": "webpack",
     "watch": "webpack --progress --watch",
     "start": "webpack-dev-server",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy-to-github-pages": "cd dist && git add --all && git commit -m \"Release at $(date)\" && git push"
   },
-  "author": "",
+  "author": "Christopher Kellner",
   "license": "ISC",
   "dependencies": {
     "angular": "^1.6.6",
