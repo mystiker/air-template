@@ -1,11 +1,15 @@
 <section layout="row" flex>
 
+    <!-- Want more info about the sidenav component? Look at https://material.angularjs.org/latest/demo/sidenav -->
     <md-sidenav class="md-sidenav-left" md-component-id="menu-left" md-is-locked-open="$mdMedia('gt-md')" md-whiteframe="4">
 
         <md-toolbar class="md-theme-indigo">
-            <h1 class="md-toolbar-tools">Sidenav Left</h1>
+            <h1 class="md-toolbar-tools">Sidenav Demo</h1>
         </md-toolbar>
         <md-content layout-padding>
+
+            <p>This sidenav is implemented to show you some material design action.</p>
+
             <p hide show-gt-md>
                 This sidenav is locked open on your device. To go back to the default behavior, narrow your display.
             </p>
@@ -14,13 +18,17 @@
     </md-sidenav>
 
     <div layout="column" flex>
+
+        <!-- Check out https://material.angularjs.org/latest/demo/toolbar for more information regarding the toolbar -->
         <md-toolbar class="md-hue-2">
             <div class="md-toolbar-tools">
+
+
                 <md-button ng-click="vm.toggle()" class="md-icon-button" aria-label="Settings">
                     <md-icon>menu</md-icon>
                 </md-button>
 
-                <h2 flex md-truncate>Toolbar Demo with Icon Buttons</h2>
+                <h2 flex md-truncate>Air-Template - get started with angular-material and webpack</h2>
 
                 <md-button class="md-icon-button" aria-label="Favorite">
                     <md-icon style="color: red;">favorite</md-icon>
@@ -32,18 +40,35 @@
             </div>
         </md-toolbar>
 
-        <md-content layout-padding flex layout="column" layout-align="center center">
-            <p>Hi {{ vm.username }}!</p>
-            <input ng-model="vm.username">
+        <md-content layout-padding>
 
-            <a ui-sref="app.home">Visit Home</a>
-            <a ui-sref="app.buttons">Visit Buttons</a>
+            <h2 class="md-display-3">Test</h1>
 
-            <md-button class="md-primary md-raised" ng-click="vm.do()">DO</md-button>
+            <p class="md-body-1">
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+            </p>
+
+            <h3 class="md-display-1">Test2</h2>
+
+            <p class="md-body-1">
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+            </p>
 
         </md-content>
 
-        <ui-view></ui-view>
-    </div>
+        <md-content layout-padding layout="column" layout-align="center center">
+            <p>
+                <span>Hi {{ vm.username }}</span>
+            </p>
 
+            <md-input-container>
+                <label>Username</label>
+                <input ng-model="vm.username">
+            </md-input-container>
+
+            <md-button class="md-primary md-raised" ng-click="vm.save()">Dummy Button</md-button>
+
+        </md-content>
+
+    </div>
 </section>

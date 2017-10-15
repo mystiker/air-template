@@ -1,6 +1,9 @@
 # Builds
 dist
 
+# User config for vscode
+.vscode
+
 # Logs
 logs
 *.log

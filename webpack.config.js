@@ -20,7 +20,7 @@ module.exports = {
     //devtool: 'source-map',
     devServer: {
         contentBase: './dist',
-        host: '192.168.178.59'
+        host: '0.0.0.0'
     },
     plugins: [
         new CleanWebpackPlugin(['dist']),

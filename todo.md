@@ -1,35 +1,48 @@
-- Implementieren von Services 
-- Implementieren von richtigen Bindings in die Components (Informationsweitergabe bspw. Master -> Detail)
+# Todos
 
-- Implementieren von eigenen Styles (less | sass)
+## Template Version
+
+- einfaches Template mit einem Controller, einer Component (AppComponent)
 - Implementieren von unterschiedlichen Configs für webpack
-
-- Absolute Basic App extrahieren (Bspw 1 Service, 1-2 Components, AppComponent)
-    - Mit ui.router
-    - so wie ich es brauche!
-
+- eigene Styles (less) implementieren
 - readme.md erstellen
-
 - template auf github stellen
-- github webseite?
+- kommentare hinzufügen
+- github demo-webseite
 
--- deadline am sonntag den 15.10.
+## Demo Version
 
-+++ demo app erstellen +++
-ich könnte ein paar features testen / hinzufügen um eine komplette demo-app zu erstellen
-die dokumentation wäre allerdings ziemlich aufwändig
+- Implementieren einer Navigation mit ui.router
 
-+++ cordova impl +++
-template mit cordova?
+### WebService Component
 
-- clone des templates
-- cordova integrieren
-- template mit cordova bereitstellen
+- Implementieren eines einfachen Services (mit DI? mit Mockup?)
+- Einfaches Binding zeigen
 
-### erste eigene app ###
-notizen app auf basis der demo (+ cordova integration)
+### Master Detail Component
+
+- Implementieren von richtigen Bindings in die Components (Informationsweitergabe bspw. Master -> Detail)
+- Bindings für Daten erstellen
+
+## Local Database Version
+
+- Implementieren von CouchDB bzw. PouchDB
+- Erweitern der Master-Detail Component
+- Erweiterung der Demo Version
+
+## Cordova Version
+
+- Erweiterung der Demo Version
+- Cordova Implementierung
+
+## Electron Version
+
+- Implementieren von Electron
+- Erweiterung der Demo Version
+
+## erste eigene app
+
+- notizen app auf basis der demo (+ cordova integration + local database)
 
 features tbd
 design tbd
-
-### super future: electron in die app rein -> kali linux
